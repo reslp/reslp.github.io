@@ -1,238 +1,322 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philipp Resl | Computational Biologist</title>
+    <style>
+        :root {
+            --bg-color: #fcfcfc;
+            --text-color: #1a1a1a;
+            --accent-color: #4a4a4a;
+            --link-color: #0056b3;
+            --border-color: #ddd;
+            --sidebar-width: 250px;
+        }
 
-	<link rel="shortcut icon" href="img/favicon.ico">
-	<link rel="stylesheet" href="css/vendor/fluidbox.min.css">
-	<link rel="stylesheet" href="css/main.css">
+        body {
+            font-family: "Georgia", "Times New Roman", Times, serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
 
-	<title>Philipp Resl</title>
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding: 2rem 0;
+            text-align: center;
+            background: white;
+        }
 
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: normal;
+            letter-spacing: -1px;
+        }
+
+        header p {
+            margin: 0.5rem 0 0;
+            font-style: italic;
+            color: #666;
+        }
+
+        nav {
+            background: white;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            text-align: center;
+        }
+
+        nav a {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-decoration: none;
+            color: var(--accent-color);
+            margin: 0 1rem;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: var(--link-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            padding: 3rem 1rem;
+            gap: 3rem;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        aside {
+            width: var(--sidebar-width);
+            font-size: 0.95rem;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: auto;
+            border-radius: 2px;
+            margin-bottom: 1.5rem;
+            filter: grayscale(20%);
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            border-left: 3px solid var(--border-color);
+            padding-left: 1rem;
+        }
+
+        .pub-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pub-list li {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.95rem;
+        }
+
+        .pub-list b {
+            color: #000;
+        }
+
+        .year-heading {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 2.5rem 0 1rem;
+            color: #333;
+            display: block;
+            border-bottom: 1px solid #ccc;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem 1rem;
+            font-size: 0.8rem;
+            color: #888;
+            border-top: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            aside {
+                width: 100%;
+                order: -1;
+                text-align: center;
+            }
+            .profile-img {
+                max-width: 300px;
+            }
+        }
+    </style>
 </head>
 <body>
 
+    <header>
+        <h1>Philipp Resl</h1>
+        <p>Computational Biologist | University of Graz</p>
+    </header>
 
-	<header>
-<!--
-		<div id="logo-container">
-			<div id="logo"><a href="/">Gumba</a></div>
-			<div id="subtitle">A design agency from Amsterdam</div>
-		</div>
-		-->
-<!-- 		<nav>
-			<ul>
-				<li><a href="#">Link 1</a></li>
-				<li><a href="#">Link 2</a></li>
-				<li><a href="#">Link 3</a></li>
-				<li><a href="mailto:your@address.com" class="bordered">Contact</a></li>
-			</ul>
-		</nav> -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+        <a href="https://reslp.github.io/blog/">Blog</a>
+        <a href="https://github.com/reslp/">GitHub</a>
+    </nav>
 
-	</header>
-	<div id="content">
+    <div class="container">
+        <aside>
+            <img src="../img/philipp.png" alt="Philipp Resl" class="profile-img">
+            
+            <div class="contact-info" id="contact">
+                <h2>Contact</h2>
+                <p><strong>Philipp Resl</strong></p>
+                <p>University of Graz<br>
+                Institute for Biology<br>
+                Holteigasse 6<br>
+                8010 Graz, Austria</p>
+                <p style="margin-top:1rem;">
+                    Email: <br>
+                    <a href="mailto:philipp.resl@uni-graz.at">philipp.resl@uni-graz.at</a>
+                </p>
+            </div>
 
-		<section class="intro">
-			<h2>Philipp Resl</h2>
-			<a href="#about">about me</a>
-			 | <a href="#research">research</a>
-			 | <a href="#publications">publications</a>
-			 | <a href="https://reslp.github.io/blog/">blog</a>
-			 | <a href="https://github.com/reslp/">github</a>
-			 | <a href="#contact">contact</a> 
-			
-			
-			<img src="img/fungi1.png" alt="Fungi">
-		<section class="row">
-			<!---<p>fungi symbiosis evolution			</p>--->
-		</section>
-<a name="about"></a>
-		<section class="row">
-			<div class="col-full">
-				<h2>about</h2>
-				<p>
-				<p>
-I am a computational Biologist working at the University of Graz (Austria). My research is focused on a special form of mutualism in the kingdom of fungi, commonly called lichens. I combine classical lichenological work (fieldwork, ecology and microscopy) with phylogenetics, genomics and transcriptomics to disentangle phylogenetic relationships and characterize evolutionary patterns in this fascinating group of organisms.</p>
-			<img src="img/fungi2.png" alt="Fungi">
-			</div>
-		</section>
+            <div class="social-links">
+                <h2>Find me on</h2>
+                <a href="https://bsky.app/profile/philippresl.bsky.social">Bluesky</a><br>
+                <a href="http://github.com/reslp/">GitHub</a><br>
+                <a href="https://scholar.google.at/citations?user=AWRriJsAAAAJ&hl=de">Google Scholar</a><br>
+            </div>
+        </aside>
 
-		<section class="row">
-			<div class="col-full">
-			<a name="research"></a>
-				<h2>research</h2>
-				
-				<p>
-				<p>
-<b>Phylogenetics and Taxonomy</b><br>
-My phylogenetic work is centered in the Ostropomycetidae one of the two subclasses of Lecanoromycetes comprised mostly of crustose lichens. Currently my work is focused on the order Baeomycetales and even more specific on the genera Trapelia and Trapeliopsis. To support taxonomic hypotheses I combine the latest phylogenetic analyses with classical lichenological work.
-<br></p>
-<p>
-<b>Adaptive evolution and Comparative methods</b><br>
-I use various statistical models to analyze the evolution of characters observed in lichenized fungi. I am specifically interested in the different evolutionary consequences for highly specialized versus generalist lineages.
-</p>
-<p>
-<b>Comparative Genomics</b><br>
-In my comparative genomics work, I search sequenced genomes for signs of adaptations to different lifestyles and traces of their evolutionary past. I use comparative transcriptomics to study adaptations to different environmental conditions.
+        <main>
+            <section id="about">
+                <h2>About</h2>
+                <p>
+                    I am a computational Biologist working at the University of Graz (Austria). My research is focused on a special form of mutualism in the kingdom of fungi, commonly called lichens. I combine classical lichenological work (fieldwork, ecology and microscopy) with phylogenetics, genomics and transcriptomics to disentangle phylogenetic relationships and characterize evolutionary patterns in this fascinating group of organisms.
+                </p>
+            </section>
 
-</p>
-	<img src="img/fungi3.png" alt="Fungi">
-	</div>
+            <section id="research">
+                <h2>Research</h2>
+                
+                <h3>Phylogenetics and Taxonomy</h3>
+                <p>
+                    My phylogenetic work is centered in the Ostropomycetidae, one of the two subclasses of Lecanoromycetes comprised mostly of crustose lichens. Currently my work is focused on the order Baeomycetales and even more specific on the genera Trapelia and Trapeliopsis. To support taxonomic hypotheses I combine the latest phylogenetic analyses with classical lichenological work.
+                </p>
 
-		</section>
+                <h3>Adaptive Evolution and Comparative Methods</h3>
+                <p>
+                    I use various statistical models to analyze the evolution of characters observed in lichenized fungi. I am specifically interested in the different evolutionary consequences for highly specialized versus generalist lineages.
+                </p>
 
-<section class="row">
-			<div class="col-full">
-			<a name="publications"></a>
-				<h2>publications</h2>
-				
-				<p>
-				<p>
+                <h3>Comparative Genomics</h3>
+                <p>
+                    In my comparative genomics work, I search sequenced genomes for signs of adaptations to different lifestyles and traces of their evolutionary past. I use comparative transcriptomics to study adaptations to different environmental conditions.
+                </p>
+            </section>
 
-<p><b>2022</b></p>
-<p>
-Almer, J., <b>Resl, P.</b>, Gudmundsson, H., Warshan, D., Andresson, O. and Werth, S. (2022): Symbiont-specific responses to environmental cues in a threesome lichen symbiosis. Molecular Ecology (online early). https://doi:10.1111/mec.16814
-</p>
-<p>
-Díaz-Escandón, D., Tagirdzhanova, G., Vanderpool, D., Allen, C.C.G., Aptroot, A., Češka, O., Hawksworth, D.L., Huereca, A., Knudsen, K., Kocourková, J., Lücking, R., <b>Resl, P.</b> and Spribille, T. (2022): Genome-level analyses resolve an ancient lineage of symbiotic ascomycetes. Current Biology 32(23): 5209–5218. https://doi.org/10.1016/j.cub.2022.11.014.
-</p>
-<p>
-Chavarria-Pizarro, T., <b>Resl, P.</b>, Kuhl-Nagel, T., Janjic, A., Fernandez Mendoza, F. and  Werth, S. (2022): Antibiotic-Induced Treatments Reveal Stress-Responsive Gene Expression in the Endangered Lichen Lobaria pulmonaria. Journal of Fungi 8 (6): 625. https://doi.org/10.3390/jof8060625
-</p>
-<p>
-<b>Resl, P.</b>, Bujold, A.R., Tagirdzhanova, G., Meidl, G., Freire Rallo, S., Kono, M., Fernández-Brime, S., Guðmundsson, H., Andrésson, Ó.S., Muggia, L., Mayrhofer, H., McCutcheon, J.P., Wedin, M., Werth, S., Willis, L.M. and Spribille, T. (2022): Large differences in carbohydrate degradation and transport potential among lichen fungal symbionts. Nature Communications 13: 2634. https://doi.org/10.1038/s41467-022-30218-6
-</p>
-<p>
-Chavarria-Pizarro, T., <b>Resl, P.</b>, Janjic, A., and Werth, S. (2022). Gene expression responses to thermal shifts in the endangered lichen Lobaria pulmonaria. Molecular Ecology, 31, 839– 858. https://doi.org/10.1111/mec.16281 
-</p>
-<p>
-Spribille, T., <b>Resl, P.</b>, Stanton, D.E. and Tagirdzhanova, G. (2022), Evolutionary biology of lichen symbioses. New Phytologist. https://doi.org/10.1111/nph.18048
-</p>
-<p>
-Gerasimova, J.V.; Beck, A.; Werth, S.; <b>Resl, P.</b> High Diversity of Type I Polyketide Genes in Bacidia rubella as Revealed by the Comparative Analysis of 23 Lichen Genomes. J. Fungi 2022, 8, 449. https://doi.org/10.3390/jof8050449 
-</p>
-<p><b>2021</b></p>
-<p>
-David Díaz-Escandón, David L. Hawksworth, Mark Powell, <b>Philipp Resl</b>, Toby Spribille (2021):
-The British chalk specialist Lecidea lichenicola auct. revealed as a new genus of Lichinomycetes. Fungal Biology. https://doi.org/10.1016/j.funbio.2021.01.007
-</p>
-<p><b>2020</b></p>
-<p>
-Toby Spribille, Alan M Fryday, Sergio Pérez-Ortega, Måns Svensson, Tor Tønsberg, Stefan Ekman, Håkon Holien, </b>Philipp Resl</b>, Kevin Schneider, Edith Stabentheiner, Holger Thüs, Jan Vondrák, Lewis Sharman (2020): Lichens and associated fungi from Glacier Bay National Park, Alaska. The Lichenologist 52(2): 61-181. doi:10.1017/S0024282920000079
-</p>
-<p><b>2018</b></p>
-<p>
-<b>Resl P</b>, Fernandez-Mendoza F, Mayrhofer H, Spribille T. (2018): The evolution of fungal substrate specificity in a widespread group of crustose lichens. Proc. R. Soc. B 285: 20180640. http://dx.doi.org/10.1098/rspb.2018.0640
-</p>
-<p>
-Chytrý M, Horsák M , Danihelka J, Ermakov N, German D, Hájek M, Hájková P, Kočí M, Kubešová S, Lustyk P, Nekola J, Pavelková Řičánková V, Preislerová Z, <b>Resl P</b>, Valachovič M (2018): A modern analogue of the Pleistocene steppe‐tundra ecosystem in southern Siberia. Boreas. https://doi.org/10.1111/bor.12338
-</p>
-<p><b>2017</b></p>
-<p>
-Milan Chytrý, Michal Horsák, Vít Syrovátka, Jiří Danihelka, Nikolai Ermakov, Dmitry A. German, Michal Hájek, Ondřej Hájek, Petra Hájková, Veronika Horsáková, Martin Kočí, Svatava Kubešová, Pavel Lustyk, Jeffrey C. Nekola, Zdenka Preislerová, <b>Philipp Resl</b>, Milan Valachovič (2017): Refugial ecosystems in central Asia as indicators of biodiversity change during the Pleistocene–Holocene transition. Ecological Indicators 77:357-367 https://doi.org/10.1016/j.ecolind.2016.12.033.
-<p>
-<p><b>2016</b></p>
-<p>
-<b>Resl, P.</b>, Mayrhofer, H., Clayden, S.R., Spribille, T., Thor, G., Tønsberg, T. and Sheard, J.W. (2016): Morphological, chemical and species delimitation analyses provide new taxonomic insights into two groups of Rinodina. The Lichenologist, 48(5), pp. 469–488.
-<p>
-<p>
-Spribille, T., Tuovinen, V., <b>Resl, P.</b>, Vanderpool, D., Wolinski, H., Aime, M. C., Schneider, K., Stabentheiner, E., Toome-Heller, M., Thor, G., Mayrhofer, H., Johannesson, H., McCutcheon, J. P. (2016): Basidiomycete yeasts in the cortex of ascomycete macrolichens. doi:http://dx.doi.org/10.1126/science.aaf8287
-<p>
-<p>
-Schneider, K., <b>Resl, P.</b> , Spribille, T. (2016): Escape from the cryptic species trap: lichen evolution on both sides of a cyanobacterial acquisition event. Molecular Ecology Accepted Manuscript. doi:10.1111/mec.13636
-<p>
-<b>2015</b><br>
-<p>
-<b>Resl, P.</b>, Schneider, K., Westberg, M., Printzen, C., Palice, Z., Thor, G., Fryday, A., Mayrhofer, H., Spribille, T. (2015): Diagnostics for a troubled backbone: testing topological hypotheses of trapelioid lichenized fungi in a large-scale phylogeny of Ostropomycetidae (Lecanoromycetidae). Fungal Diversity (in press)
-</p>
-<p>
-Schneider, K., <b>Resl, P.</b>, Westberg, M., Spribille, T. (2015): A new, highly effective primer pair to exclude algae when amplifying nuclear large ribosomal subunit (LSU) DNA from lichens. Lichenologist (in press)
-</p>
-</p>
-<p>
-<b>2014</b>
-<p>
-Spribille, T., <b>Resl, P.</b>, Ahti, T., Pérez-Ortega, S., Mayrhofer, H., Lumbsch, H.T. (2014): Molecular systematics of the wood-inhabiting, lichen-forming genus Xylographa (Baeomycetales, Ostropomycetidae) with eight new species. Symbolae Botanicae Upsalienses 37(1): 1-87.
-</p>
-</p>
-	</div>
+            <section id="publications">
+                <h2>Publications</h2>
 
-		</section>
+                <span class="year-heading">2025</span>
+                <ul class="pub-list">
+                    <li>T Pfingstl, V Vtípilová, H Ghlimová, J Mourek, J Steinová, TP Hessinger, S Schäffer, <b>P Resl</b> (2025) Oribatid mite fauna of three members of the lichen genus Cladonia in Europe – observations on species richness, endophagous juveniles and their morphology. <i>Acarologia</i>. <a href="https://doi.org/10.24349/nalv-gpxm">doi:10.24349/nalv-gpxm</a></li>
+                    <li>AJ Cruz-Laufer, MPM Vanhove, L Bachmann, M Barson, H Bassirou, AR Bitja Nyom, M Geraerts, C Hahn, T Huyse, GK Kasembele, S Njom, <b>P Resl</b>, K Smeets, N Kmentová (2025) Adaptive evolution of stress response genes in parasites aligns with host niche diversity. <i>BMC Biology</i>. <a href="https://doi.org/10.1186/s12915-024-02091-w">doi:10.1186/s12915-024-02091-w</a></li>
+                    <li>V Vtípilová, E Timdal, E Stodůlková, J Semerád, <b>P Resl</b>, J Steinová (2025) Cladonia rubrotincta, a new species distinct from C. norvegica.</li>
+                </ul>
 
+                <span class="year-heading">2024</span>
+                <ul class="pub-list">
+                    <li>S Koblmüller, <b>P Resl</b>, N Klar, H Bauer, L Zangl, C Hahn (2024) DNA Barcoding for Species Identification of Moss-Dwelling Invertebrates: Performance of Nanopore Sequencing and Coverage in Reference Database. <i>Diversity</i>. <a href="https://doi.org/10.3390/d16040196">doi:10.3390/d16040196</a></li>
+                    <li>AM Mc Cartney, G Formenti, A Mouton, ..., <b>P Resl</b>, et al. (2024) The European Reference Genome Atlas: piloting a decentralised approach to equitable biodiversity genomics. <i>npj Biodiversity</i>. <a href="https://doi.org/10.1038/s44185-024-00054-6">doi:10.1038/s44185-024-00054-6</a></li>
+                </ul>
 
-<!--
-		<section class="row">
-			<div class="photo-grid">
-				<a href="img/example-photo-b.jpg" rel="lightbox" class="col-2"><img src="img/example-photo-b.jpg" alt="Example photo"></a>
-				<a href="img/example-photo-c.jpg" rel="lightbox" class="col-2"><img src="img/example-photo-c.jpg" alt="Example photo"></a>
-				<a href="img/example-photo-a.jpg" rel="lightbox" class="col-1"><img src="img/example-photo-a.jpg" alt="Example photo"></a>
-			</div>
-		</section>
--->
+                <span class="year-heading">2023</span>
+                <ul class="pub-list">
+                    <li>J Almer, <b>P Resl</b>, H Gudmundsson, D Warshan, OS Andrésson, S Werth (2023) Symbiont‐specific responses to environmental cues in a threesome lichen symbiosis. <i>Molecular Ecology</i>. <a href="https://doi.org/10.1111/mec.16814">doi:10.1111/mec.16814</a></li>
+                </ul>
 
+                <span class="year-heading">2022</span>
+                <ul class="pub-list">
+                    <li><b>P Resl</b>, AR Bujold, G Tagirdzhanova, P Meidl, SF Rallo, M Kono, S Fernández-Brime, H Guðmundsson, ÓS Andrésson, L Muggia, H Mayrhofer, JP McCutcheon, M Wedin, S Werth, LM Willis, T Spribille (2022) Large differences in carbohydrate degradation and transport potential among lichen fungal symbionts. <i>Nature Communications</i>. <a href="https://doi.org/10.1038/s41467-022-30218-6">doi:10.1038/s41467-022-30218-6</a></li>
+                    <li>D Díaz-Escandón, G Tagirdzhanova, D Vanderpool, CCG Allen, A Aptroot, O Češka, DL Hawksworth, A Huereca, K Knudsen, J Kocourková, R Lücking, <b>P Resl</b>, T Spribille (2022) Genome-level analyses resolve an ancient lineage of symbiotic ascomycetes. <i>Current Biology</i>. <a href="https://doi.org/10.1016/j.cub.2022.11.014">doi:10.1016/j.cub.2022.11.014</a></li>
+                    <li>T Chavarria-Pizarro, <b>P Resl</b>, A Janjic, S Werth (2022) Gene expression responses to thermal shifts in the endangered lichen Lobaria pulmonaria. <i>Molecular Ecology</i>. <a href="https://doi.org/10.1111/mec.16281">doi:10.1111/mec.16281</a></li>
+                    <li>T Chavarria-Pizarro, <b>P Resl</b>, T Kuhl-Nagel, A Janjic, F Fernandez Mendoza, S Werth (2022) Antibiotic-Induced Treatments Reveal Stress-Responsive Gene Expression in the Endangered Lichen Lobaria pulmonaria. <i>Journal of Fungi</i>. <a href="https://doi.org/10.3390/jof8060625">doi:10.3390/jof8060625</a></li>
+                    <li>JV Gerasimova, A Beck, S Werth, <b>P Resl</b> (2022) High Diversity of Type I Polyketide Genes in Bacidia rubella as Revealed by the Comparative Analysis of 23 Lichen Genomes. <i>Journal of Fungi</i>. <a href="https://doi.org/10.3390/jof8050449">doi:10.3390/jof8050449</a></li>
+                    <li>T Spribille, <b>P Resl</b>, DE Stanton, G Tagirdzhanova (2022) Evolutionary biology of lichen symbioses. <i>The New Phytologist</i>. <a href="https://doi.org/10.1111/nph.18048">doi:10.1111/nph.18048</a></li>
+                </ul>
 
-		<section class="row">
-			<div class="col2">
-					<img src="img/philipp.png" alt="phil">
-			</div>
-			<div class="col2">
-				<h2>Contact</h2>
-				<a name="contact"></a>
-				<p>
-					Philipp Resl<br>
-University of Graz<br>
-Institute for Biology<br>
-Universitätsplatz 2<br>
-8010 Graz<br>
-Austria<br>
-					<br>
-					E-Mail:<br>
-					philipp.resl {at} uni-graz.at
+                <span class="year-heading">2021</span>
+                <ul class="pub-list">
+                    <li>D Díaz-Escandón, DL Hawksworth, M Powell, <b>P Resl</b>, T Spribille (2021) The British chalk specialist Lecidea lichenicola auct. revealed as a new genus of Lichinomycetes. <i>Fungal Biology</i>. <a href="https://doi.org/10.1016/j.funbio.2021.01.007">doi:10.1016/j.funbio.2021.01.007</a></li>
+                    <li><b>P Resl</b>, C Hahn (2021) phylociraptor: rapid phylogenomic tree calculator. <i>GitHub</i>. <a href="https://github.com/reslp/phylociraptor">reslp/phylociraptor</a></li>
+                </ul>
 
-				</p>
-			</div>
-			<div class="col2">
-				<h2>Find me on</h2>
-				<p>
-					<a href="http://twitter.com/philippresl">Twitter</a>, <a href="http://github.com/reslp/">GitHub</a>, <a href="https://www.flickr.com/photos/rephi/">Flickr</a>, <a href="https://scholar.google.at/citations?user=AWRriJsAAAAJ&hl=de">Google Scholar</a>.
-				</p>
-			</div>
-		</section>
+                <span class="year-heading">2020</span>
+                <ul class="pub-list">
+                    <li>T Spribille, AM Fryday, S Pérez-Ortega, M Svensson, T Tønsberg, S Ekman, H Holien, <b>P Resl</b>, K Schneider, E Stabentheiner, H Thues, J Vondrák, L Sharman (2020) Lichens and associated fungi from Glacier Bay National Park, Alaska. <i>The Lichenologist</i>. <a href="https://doi.org/10.1017/S0024282920000079">doi:10.1017/S0024282920000079</a></li>
+                </ul>
 
+                <span class="year-heading">2018</span>
+                <ul class="pub-list">
+                    <li><b>P Resl</b>, F Fernández-Mendoza, H Mayrhofer, T Spribille (2018) The evolution of fungal substrate specificity in a widespread group of crustose lichens. <i>Proceedings of the Royal Society B</i>. <a href="https://doi.org/10.1098/rspb.2018.0640">doi:10.1098/rspb.2018.0640</a></li>
+                    <li>M Chytrý, et al., <b>P Resl</b>, et al. (2018) A modern analogue of the Pleistocene steppe‐tundra ecosystem in southern Siberia. <i>Boreas</i>. <a href="https://doi.org/10.1111/bor.12338">doi:10.1111/bor.12338</a></li>
+                </ul>
 
-		<section class="row">
-			<div class="col-full">
-				<p>
-					© 2022 Philipp Resl 
-				</p>
-			</div>
-		</section>
+                <span class="year-heading">2017</span>
+                <ul class="pub-list">
+                    <li>M Chytrý, et al., <b>P Resl</b>, et al. (2017) Refugial ecosystems in central Asia as indicators of biodiversity change during the Pleistocene–Holocene transition. <i>Ecological Indicators</i>. <a href="https://doi.org/10.1016/j.ecolind.2016.12.033">doi:10.1016/j.ecolind.2016.12.033</a></li>
+                </ul>
 
-	</div>
+                <span class="year-heading">2016</span>
+                <ul class="pub-list">
+                    <li><b>P Resl</b>, H Mayrhofer, SR Clayden, T Spribille, G Thor, T Tønsberg, JW Sheard (2016) Morphological, chemical and species delimitation analyses provide new taxonomic insights into two groups of Rinodina. <i>The Lichenologist</i>. <a href="https://doi.org/10.1017/S0024282916000359">doi:10.1017/S0024282916000359</a></li>
+                    <li>T Spribille, V Tuovinen, <b>P Resl</b>, et al. (2016) Basidiomycete yeasts in the cortex of ascomycete macrolichens. <i>Science</i>. <a href="https://doi.org/10.1126/science.aaf8287">doi:10.1126/science.aaf8287</a></li>
+                    <li>K Schneider, <b>P Resl</b>, T Spribille (2016) Escape from the cryptic species trap: lichen evolution on both sides of a cyanobacterial acquisition event. <i>Molecular Ecology</i>. <a href="https://doi.org/10.1111/mec.13636">doi:10.1111/mec.13636</a></li>
+                </ul>
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script>
-	if (!window.jQuery)
-	{
-	    document.write('<script src="js/vendor/jquery.1.11.min.js"><\/script>');
-	}
-	</script>
+                <span class="year-heading">2015</span>
+                <ul class="pub-list">
+                    <li><b>P Resl</b>, K Schneider, M Westberg, C Printzen, Z Palice, G Thor, A Fryday, H Mayrhofer, T Spribille (2015) Diagnostics for a troubled backbone: testing topological hypotheses of trapelioid lichenized fungi in a large-scale phylogeny of Ostropomycetidae. <i>Fungal Diversity</i>. <a href="https://doi.org/10.1007/s13225-015-0332-y">doi:10.1007/s13225-015-0332-y</a></li>
+                    <li>K Schneider, <b>P Resl</b>, M Westberg, T Spribille (2015) A new, highly effective primer pair to exclude algae when amplifying nuclear large ribosomal subunit (LSU) DNA from lichens. <i>The Lichenologist</i>. <a href="https://doi.org/10.1017/S002428291500016X">doi:10.1017/S002428291500016X</a></li>
+                </ul>
 
-	<script src="js/vendor/jquery.fluidbox.min.js"></script>
-	<script src="js/main.js"></script>
+                <span class="year-heading">2014</span>
+                <ul class="pub-list">
+                    <li>T Spribille, <b>P Resl</b>, T Ahti, S Pérez-Ortega, H Mayrhofer, HT Lumbsch (2014) Molecular systematics of the wood-inhabiting, lichen-forming genus Xylographa with eight new species. <i>Symbolae Botanicae Upsalienses</i>.</li>
+                </ul>
+            </section>
+        </main>
+    </div>
 
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'YOUR_GOOGLE_ANALYTICS_ID', 'auto');
-	  ga('send', 'pageview');
-
-	</script>
+    <footer>
+        <p>&copy; 2026 Philipp Resl</p>
+    </footer>
 
 </body>
 </html>
